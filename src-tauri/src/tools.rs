@@ -13,7 +13,7 @@ pub enum ToolCall {
     OpenApp { app: String },
 
     #[serde(rename = "screenshot")]
-    Screenshot,
+    Screenshot {},
 
     #[serde(rename = "click")]
     Click { x: i32, y: i32 },
@@ -50,7 +50,7 @@ pub fn execute_tool(call: &ToolCall) -> Result<String, String> {
             Ok(format!("🚀 Opened {}", app))
         }
 
-        ToolCall::Screenshot => {
+        ToolCall::Screenshot {} => {
             let monitors = Monitor::all().map_err(|e| e.to_string())?;
             let monitor = monitors.into_iter().next().ok_or("No monitor found")?;
             let image = monitor.capture_image().map_err(|e| e.to_string())?;
