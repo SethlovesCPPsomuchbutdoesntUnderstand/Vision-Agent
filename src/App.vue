@@ -11,7 +11,7 @@ Set-Content "C:\Users\ADMIN\vision-agent\src\App.vue" @'
         <input
           v-model="prompt"
           class="prompt-input"
-          placeholder="e.g. Open Spotify and search Flashing Lights"
+          placeholder="Your command"
           :disabled="loading"
           :class="{ blocked: isBlocked }"
           maxlength="500"
