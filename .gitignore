@@ -1,24 +1,15 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Model files
+src-tauri/models/
+*.gguf
 
-node_modules
-dist
-dist-ssr
-*.local
+# llama-server binaries
+src-tauri/bin/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Rust build artifacts
+src-tauri/target/
+
+# Node modules
+node_modules/
+
+# Tauri gen folder
+src-tauri/gen/
